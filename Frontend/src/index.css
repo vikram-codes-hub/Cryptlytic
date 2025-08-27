@@ -29,7 +29,8 @@ a {
 }
 
 
-@theme{
-    --font-outfit: "Space Grotesk", sans-serif;
-  
+@theme {
+  --font-outfit: "Space Grotesk", sans-serif;
+  --color-purpel: "rgba(84,3,255,0.15)";
+  --color-violet: "rgba(105,2,153,0.15)";
 }
