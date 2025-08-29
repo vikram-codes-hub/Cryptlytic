@@ -5,6 +5,7 @@ import Home from './Pages/Home'
 import Coin from './Pages/Coin'
 import Features from './Pages/Features'
 import Aboutus from './Pages/Aboutus'
+import Footer from './Pages/Footer'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/features' element={<Features/>}/>
         <Route path='/Aboutus' element={<Aboutus/>}/>
       </Routes>
+      <Footer/>
     </div>
   )
 }

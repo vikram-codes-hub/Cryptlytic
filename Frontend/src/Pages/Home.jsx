@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { CoinContext } from '../Context/CoinContext'
-
+import {Link} from 'react-router-dom'
 const Home = () => {
 
   const {allcoins,currency}=useContext(CoinContext)
@@ -103,11 +103,11 @@ useEffect(() => {
           <div className='divide-y divide-white/5'>
             {displaycoins && displaycoins.length > 0 ? (
               displaycoins.slice(0,10).map((item, index) => (
-                <div 
+                <Link to={`/coin/${item.id}`}
                   key={item.id || index} 
                   className="grid grid-cols-[0.7fr_1.3fr_1fr_1fr_1.5fr] gap-4 items-center px-2 md:px-6 py-4 hover:bg-white/5 transition-colors duration-200 cursor-pointer"
                 >
-                  {/* Rank */}
+                
                   <p className='text-white/80 font-medium'>
                     {item.market_cap_rank || index + 1}
                   </p>
@@ -147,7 +147,7 @@ useEffect(() => {
                   <p className='text-right text-white/80'>
                     {currency.Symbol}{item.market_cap?.toLocaleString() || 'N/A'}
                   </p>
-                </div>
+                </Link>
               ))
             ) : (
               <div className='px-6 py-8 text-center text-white/60'>
