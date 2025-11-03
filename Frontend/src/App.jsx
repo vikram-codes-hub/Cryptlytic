@@ -6,6 +6,8 @@ import Coin from './Pages/Coin'
 import Features from './Pages/Features'
 import Aboutus from './Pages/Aboutus'
 import Footer from './Pages/Footer'
+import Signup from './Pages/Signup'
+import Portfolio from './Pages/Portfolio'
 
 const App = () => {
   return (
@@ -16,7 +18,9 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/coin/:coinId' element={<Coin/>}/>
         <Route path='/features' element={<Features/>}/>
+        <Route path='/portfolio' element={<Portfolio/>}/>
         <Route path='/Aboutus' element={<Aboutus/>}/>
+        <Route path='/signup' element={<Signup/>}/>
       </Routes>
       <Footer/>
     </div>
