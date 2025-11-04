@@ -4,6 +4,10 @@ import { Eye, EyeOff, Mail, Lock, User, Sparkles } from 'lucide-react';
 const Signup = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [email,setemail]=useState("");
+  const [password,setpassword]=useState("");
+  const [name,setname]=useState("");
+  const [isDatasubmitted,setisDatasubmitted]=useState(false);
 
   const loginHandler = () => {
     setIsLogin(!isLogin);
@@ -139,7 +143,7 @@ const Signup = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-[1.02] transition-all duration-200 mt-6"
+                className="w-full py-4 bg-blue-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-[1.02] transition-all duration-200 mt-6"
               >
                 {isLogin ? 'Login Now' : 'Create Account'}
               </button>

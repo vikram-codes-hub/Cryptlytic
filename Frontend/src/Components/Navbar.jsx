@@ -169,10 +169,11 @@ const Navbar = () => {
 
                   {/* Logout */}
                   <div className='border-t border-white/10 py-2'>
+                   <Link to={'/signup'}>
                     <button className='w-full px-4 py-3 flex items-center gap-3 hover:bg-red-500/20 transition-colors text-left'>
                       <LogOut className='w-4 h-4 text-red-400' />
                       <span className='text-sm text-red-400'>Logout</span>
-                    </button>
+                    </button></Link>
                   </div>
                 </div>
               </>
