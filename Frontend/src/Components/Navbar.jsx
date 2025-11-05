@@ -4,6 +4,7 @@ import arrow_icon from '../assets/arrow_icon.png'
 import { Link, NavLink } from 'react-router-dom'
 import { CoinContext } from '../Context/CoinContext'
 import { Settings, User, Bell, Shield, LogOut, Moon, Sun } from 'lucide-react'
+import { UserContext } from '../Context/UserContext'
 
 const Navbar = () => {
   const {currency,setCurrency}=useContext(CoinContext)
@@ -11,6 +12,7 @@ const Navbar = () => {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
   const [darkMode, setDarkMode] = useState(true)
 
+  const {authuser}=useContext(UserContext)
   const handleCurrencyChange=(e)=>{
     switch(e.target.value){
       case "usd":{
@@ -181,12 +183,15 @@ const Navbar = () => {
           </div>
           
           {/* Sign Up Button */}
-          <Link to='/signup'> 
-            <button className='flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 lg:px-5 py-2 lg:py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm lg:text-base whitespace-nowrap'>
-              Sign Up
-              <img src={arrow_icon} alt="Arrow Icon" className='w-3 h-3 lg:w-4 lg:h-4 invert' />
-            </button>
-          </Link>
+         {!authuser && (
+  <Link to='/signup'> 
+    <button className='flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 lg:px-5 py-2 lg:py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm lg:text-base whitespace-nowrap'>
+      Signup
+      <img src={arrow_icon} alt="Arrow Icon" className='w-3 h-3 lg:w-4 lg:h-4 invert' />
+    </button>
+  </Link>
+)}
+
         </div>
 
         {/* Mobile Menu Button */}

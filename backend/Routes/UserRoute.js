@@ -6,7 +6,7 @@ import { authMiddelware } from "../Middelware/UserMiddel.js";
 const Userrouter = express.Router();
 
 // Signup route
-Userrouter.post("/register", RegisterUSer);
+Userrouter.post("/signup", RegisterUSer);
 
 // Login route
 Userrouter.post("/login", Login);

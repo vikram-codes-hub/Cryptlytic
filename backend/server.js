@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { connectDb } from "./Config/db.js";
 import Userrouter from "./Routes/UserRoute.js";
+import Porouter from "./Routes/Portfolioroute.js";
 
 dotenv.config();
 connectDb();
@@ -22,6 +23,9 @@ app.get("/", (req, res) => {
 
 // User routes
 app.use("/api/user", Userrouter);
+
+//Porfolio routes
+app.use('/api/portfolio',Porouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
