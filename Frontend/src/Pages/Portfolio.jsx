@@ -150,7 +150,7 @@ const Portfolio = () => {
           )}
         </div>
 
-        {/* Add Modal */}
+       
         {showAddModal && (
           <div onClick={()=>setShowAddModal(false)} className='fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4'>
             <div className='bg-[#1a0b2e] rounded-xl p-6 max-w-md w-full border border-white/20'>
