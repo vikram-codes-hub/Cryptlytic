@@ -14,7 +14,7 @@ import ProtectedRoute from '../Utility/ProtectedROute'
 
 const App = () => {
   const {authuser} = useContext(UserContext)
-  
+  // const location = useLocation();
   return (
     <div className='app'>
       <Toaster/>
